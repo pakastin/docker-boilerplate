@@ -1,0 +1,45 @@
+
+proxy:
+  build: proxy
+  dockerfile: Dockerfile-dev
+  restart: 'always'
+  environment:
+    NET: 'projectnamedev'
+  net: 'projectnamedev'
+  ports:
+    - '80:80'
+  volumes:
+    - './proxy/src:/app/src'
+
+index:
+  build: index
+  dockerfile: Dockerfile-dev
+  restart: 'always'
+  environment:
+    NET: 'projectnamedev'
+  net: 'projectnamedev'
+  volumes:
+    - './index/public:/app/public'
+    - './index/src:/app/src'
+
+cats:
+  build: cats
+  dockerfile: Dockerfile-dev
+  restart: 'always'
+  environment:
+    NET: 'projectnamedev'
+  net: 'projectnamedev'
+  volumes:
+    - './cats/public:/app/public'
+    - './cats/src:/app/src'
+
+dogs:
+  build: dogs
+  dockerfile: Dockerfile-dev
+  restart: 'always'
+  environment:
+    NET: 'projectnamedev'
+  net: 'projectnamedev'
+  volumes:
+    - './dogs/public:/app/public'
+    - './dogs/src:/app/src'

@@ -1,0 +1,20 @@
+{
+  "name": "docker-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "watch.js",
+  "scripts": {
+    "dev": "./build-dev && ./run-dev && node watch",
+    "start": "./build && ./run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar": "~1.4.2",
+    "nib": "~1.1.0",
+    "rollup": "~0.25.3",
+    "stylus": "~0.53.0",
+    "uglify-js": "~2.6.1"
+  }
+}

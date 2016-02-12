@@ -1,0 +1,30 @@
+
+proxy:
+  build: proxy
+  restart: 'always'
+  environment:
+    NET: 'projectname'
+  net: 'projectname'
+  ports:
+    - '80:80'
+
+index:
+  build: index
+  restart: 'always'
+  environment:
+    NET: 'projectname'
+  net: 'projectname'
+
+cats:
+  build: cats
+  restart: 'always'
+  environment:
+    NET: 'projectname'
+  net: 'projectname'
+
+dogs:
+  build: dogs
+  restart: 'always'
+  environment:
+    NET: 'projectname'
+  net: 'projectname'

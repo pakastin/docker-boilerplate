@@ -1,0 +1,1 @@
+!function(){"use strict";var e=document.createElement("h1");e.textContent="Meow!",document.body.appendChild(e)}();

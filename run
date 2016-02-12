@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker network create projectname
+docker-compose -p projectname -f docker-compose-dev.yml up -d $@
