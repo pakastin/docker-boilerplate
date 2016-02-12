@@ -19,7 +19,7 @@ Starts watching following files:
 - [project]/css/**/*.styl --> build CSS to [project]/public/css/main.css
 - [project]/scripts/**/*.js --> build JS to [project]/public/js/main.js
 - [project]/src/**/*.js --> restart process
-- [project]/package.json --> npm install
+- [project]/package.json --> npm install + restart process
 
 ### run production version
 ```
