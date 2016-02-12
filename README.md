@@ -15,7 +15,11 @@ npm install
 ```
 npm run dev
 ```
-Starts watching following files:
+1) Mounts following files/folders for rapid updates:
+- [process]/public --> /app/public
+- [process]/src --> /app/src
+
+2) Starts watching following files:
 - [process]/css/**/*.styl --> build CSS to [process]/public/css/main.css
 - [process]/scripts/**/*.js --> build JS to [process]/public/js/main.js
 - [process]/src/**/*.js --> restart process
