@@ -23,7 +23,7 @@ function watchNode (name) {
     .on('change', exec(cmd));
 
   chokidar.watch(`${name}/package.json`)
-    .on('change', exec(cmd2));
+    .on('change', exec(cmd2, cmd));
 }
 
 function watchCSS (name, init) {
