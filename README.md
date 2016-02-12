@@ -18,6 +18,7 @@ npm run dev
 1) Mounts following files/folders for rapid updates:
 - [process]/public --> /app/public
 - [process]/src --> /app/src
+(node_modules are separately in /app/node_modules)
 
 2) Starts watching following files:
 - [process]/css/**/*.styl --> build CSS to [process]/public/css/main.css
