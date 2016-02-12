@@ -1,4 +1,4 @@
-# Docker + Node.js Boilerplate
+# Docker + Node.js boilerplate
 This is how I roll..
 
 ## install dev environment
