@@ -35,7 +35,7 @@ function watchCSS (name, init) {
 }
 
 function watchJS (name, init) {
-  var cmd = `rollup ${name}/js/index.js -f iife -o ${name}/public/js/main-dev.js`;
+  var cmd = `rollup -c -f iife ${name}/js/index.js -o ${name}/public/js/main-dev.js`;
   var cmd2 = `uglifyjs ${name}/public/js/main-dev.js -cmo ${name}/public/js/main.js`;
 
   init && exec(cmd, cmd2)();

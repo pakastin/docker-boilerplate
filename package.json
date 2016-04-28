@@ -8,6 +8,7 @@
     "dev-stop": "sh sh/stop-dev.sh",
     "start": "sh sh/build.sh && sh sh/run.sh",
     "stop": "sh sh/stop.sh",
+    "stop-dev": "sh sh/stop-dev.sh",
     "npminstall": "sh sh/npminstall-dev.sh",
     "restart": "sh sh/restart-dev.sh",
     "scale": "sh sh/scale.sh",
@@ -19,6 +20,7 @@
     "chokidar": "~1.4.2",
     "nib": "~1.1.0",
     "rollup": "~0.26.1",
+    "rollup-plugin-buble": "~0.6.0",
     "stylus": "~0.54.5",
     "uglify-js": "~2.6.1"
   }
