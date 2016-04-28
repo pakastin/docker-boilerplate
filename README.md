@@ -37,5 +37,5 @@ npm start
 ### Scale
 Just run:
 ```
-docker-compose scale cats=5 dogs=5
+npm run scale cats=5 dogs=5
 ```
