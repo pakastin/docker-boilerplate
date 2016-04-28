@@ -5,8 +5,11 @@
   "main": "watch.js",
   "scripts": {
     "dev": "./build-dev && ./run-dev && node watch",
+    "dev-stop": "./stop-dev",
     "start": "./build && ./run",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "stop": "./stop",
+    "scale": "./scale",
+    "scale-dev": "./scale-dev"
   },
   "author": "",
   "license": "ISC",
