@@ -35,12 +35,12 @@ function watchCSS (name, init) {
 }
 
 function watchJS (name, init) {
-  var cmd = `rollup ${name}/scripts/index.js -f iife -o ${name}/public/js/main-dev.js`;
+  var cmd = `rollup ${name}/js/index.js -f iife -o ${name}/public/js/main-dev.js`;
   var cmd2 = `uglifyjs ${name}/public/js/main-dev.js -cmo ${name}/public/js/main.js`;
 
   init && exec(cmd, cmd2)();
 
-  chokidar.watch(`${name}/scripts/**/*.js`)
+  chokidar.watch(`${name}/js/**/*.js`)
     .on('change', exec(cmd, cmd2));
 }
 
