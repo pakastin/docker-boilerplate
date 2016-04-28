@@ -1,18 +1,14 @@
 # Docker + Node.js boilerplate
 This is how I roll..
 
-## clone
+## Clone
 ```
 git clone http://github.com/pakastin/docker-boilerplate
 ```
 
-## install dev environment
+## Run dev environment
 ```
 npm install
-```
-
-## run dev environment
-```
 npm run dev
 ```
 1) Mounts following files/folders for rapid updates:
@@ -29,25 +25,31 @@ npm run dev
 
 3) Will quit on cmd+c
 
-### run production version
+### Start production version
 ```
 npm start
 ```
-(no need to run `npm install` first)
-..or without node.js:
+### Start production version without node.js
 ```
 docker-compose up -d
 ```
-### Scale
-Just run:
+### Scale containers
 ```
 npm run scale cats=5 dogs=5
 ```
-..or without node.js:
+### Scale containers without node.js
 ```
 docker-compose scale cats=1 dogs=2 index=3 proxy=4
 ```
-..or to scale dev:
+### Scale dev containers
 ```
 npm run scale-dev cats=5 dogs=5
+```
+### Stop containers
+```
+npm run stop
+```
+### Stop dev containers
+```
+npm run stop-dev
 ```
