@@ -4,7 +4,7 @@ services:
   proxy:
     build:
       context: proxy
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     restart: 'always'
     environment:
       NET: 'boilerplate'
@@ -16,7 +16,7 @@ services:
   index:
     build:
       context: index
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     restart: 'always'
     environment:
       NET: 'boilerplate'
@@ -28,7 +28,7 @@ services:
   cats:
     build:
       context: cats
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     restart: 'always'
     environment:
       NET: 'boilerplate'
@@ -40,7 +40,7 @@ services:
   dogs:
     build:
       context: dogs
-      dockerfile: Dockerfile-dev
+      dockerfile: Dockerfile
     restart: 'always'
     environment:
       NET: 'boilerplate'

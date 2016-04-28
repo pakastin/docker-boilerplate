@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker network create boilerplate
-docker-compose -p boilerplate -f docker-compose-dev.yml up $@
+docker network create boilerplatedev
+docker-compose -p boilerplate -f docker-compose-dev.yml up -d $@

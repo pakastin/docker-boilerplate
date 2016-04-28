@@ -10,12 +10,6 @@ build.on('exit', function () {
   var run = cp.spawn('./run-dev');
   run.stdout.pipe(process.stdout);
   run.stderr.pipe(process.stderr);
-  process.on('SIGINT', onKill);
-
-  function onKill () {
-    process.removeListener('SIGINT', onKill);
-    run.kill('SIGINT');
-  }
 });
 
 watchNode('proxy');

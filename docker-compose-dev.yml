@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile-dev
     restart: 'always'
     environment:
-      NET: 'boilerplate'
+      NET: 'boilerplatedev'
     networks:
-      boilerplate:
+      boilerplatedev:
     ports:
       - '80:80'
     volumes:
@@ -21,9 +21,9 @@ services:
       dockerfile: Dockerfile-dev
     restart: 'always'
     environment:
-      NET: 'boilerplate'
+      NET: 'boilerplatedev'
     networks:
-      boilerplate:
+      boilerplatedev:
         aliases:
           - index
     volumes:
@@ -36,9 +36,9 @@ services:
       dockerfile: Dockerfile-dev
     restart: 'always'
     environment:
-      NET: 'boilerplate'
+      NET: 'boilerplatedev'
     networks:
-      boilerplate:
+      boilerplatedev:
         aliases:
           - cats
     volumes:
@@ -51,9 +51,9 @@ services:
       dockerfile: Dockerfile-dev
     restart: 'always'
     environment:
-      NET: 'boilerplate'
+      NET: 'boilerplatedev'
     networks:
-      boilerplate:
+      boilerplatedev:
         aliases:
           - dogs
     volumes:
@@ -61,4 +61,4 @@ services:
       - './dogs/src:/app/src'
 
 networks:
-  boilerplate:
+  boilerplatedev:
