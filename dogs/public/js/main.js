@@ -1,1 +1,1 @@
-!function(){"use strict";var t=document.createElement("h1");t.textContent="Woof!",document.body.appendChild(t)}();
+!function(){"use strict";var e=document.createElement("a"),t=document.createElement("h1");t.textContent="Woof!",e.href="/",e.textContent="Back to index",document.body.appendChild(t),document.body.appendChild(e)}();
