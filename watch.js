@@ -3,6 +3,8 @@ var cp = require('child_process');
 
 var chokidar = require('chokidar');
 
+exec('./build-dev', './run-dev')();
+
 watchNode('proxy');
 
 watchNode('index');

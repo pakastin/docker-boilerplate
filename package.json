@@ -4,7 +4,7 @@
   "description": "",
   "main": "watch.js",
   "scripts": {
-    "dev": "./build-dev && ./run-dev && node watch",
+    "dev": "node watch",
     "start": "./build && ./run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
