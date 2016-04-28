@@ -1,5 +1,4 @@
 # Docker + Node.js boilerplate
-This is how I roll..
 
 ## Clone
 ```
