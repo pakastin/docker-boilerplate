@@ -27,7 +27,15 @@ npm run dev
 - [process]/src/**/*.js --> restart process
 - [process]/package.json --> npm install + restart process
 
+3) Will quit on cmd+c
+
 ### run production version
 ```
 npm start
+```
+
+### Scale
+Just run:
+```
+docker-compose scale cats=5 dogs=5
 ```
