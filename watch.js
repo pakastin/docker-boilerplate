@@ -3,15 +3,6 @@ var cp = require('child_process');
 
 var chokidar = require('chokidar');
 
-var build = cp.spawn('./build-dev');
-build.stdout.pipe(process.stdout);
-build.stderr.pipe(process.stderr);
-build.on('exit', function () {
-  var run = cp.spawn('./run-dev');
-  run.stdout.pipe(process.stdout);
-  run.stderr.pipe(process.stderr);
-});
-
 watchNode('proxy');
 
 watchNode('index');
