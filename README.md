@@ -33,7 +33,11 @@ npm run dev
 ```
 npm start
 ```
-
+(no need to run `npm install` first)
+..or without node.js:
+```
+docker-compose up
+```
 ### Scale
 Just run:
 ```
