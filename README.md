@@ -45,7 +45,7 @@ npm run scale cats=5 dogs=5
 ```
 ..or without node.js:
 ```
-docker-compose scale cats=5 dogs=5 index=5 
+docker-compose scale cats=1 dogs=2 index=3 proxy=4
 ```
 ..or to scale dev:
 ```
