@@ -12,10 +12,10 @@ app.set('strict routing', true);
 app.get('/cats', redirectTo('/cats/'));
 app.get('/dogs', redirectTo('/dogs/'));
 
-app.get('/', proxyTo(`http://${NET}_index_1`));
+app.get('/', proxyTo(`http://index`));
 
-app.use('/cats', proxyTo(`http://${NET}_cats_1`));
-app.use('/dogs', proxyTo(`http://${NET}_dogs_1`));
+app.use('/cats', proxyTo(`http://cats`));
+app.use('/dogs', proxyTo(`http://dogs`));
 
 function redirectTo (target) {
   return function (req, res, next) {

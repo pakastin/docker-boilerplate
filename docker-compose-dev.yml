@@ -1,45 +1,64 @@
+version: '2'
 
-proxy:
-  build: proxy
-  dockerfile: Dockerfile-dev
-  restart: 'always'
-  environment:
-    NET: 'projectnamedev'
-  net: 'projectnamedev'
-  ports:
-    - '80:80'
-  volumes:
-    - './proxy/src:/app/src'
+services:
+  proxy:
+    build:
+      context: proxy
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+    ports:
+      - '80:80'
+    volumes:
+      - './proxy/src:/app/src'
 
-index:
-  build: index
-  dockerfile: Dockerfile-dev
-  restart: 'always'
-  environment:
-    NET: 'projectnamedev'
-  net: 'projectnamedev'
-  volumes:
-    - './index/public:/app/public'
-    - './index/src:/app/src'
+  index:
+    build:
+      context: index
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+        aliases:
+          - index
+    volumes:
+      - './index/public:/app/public'
+      - './index/src:/app/src'
 
-cats:
-  build: cats
-  dockerfile: Dockerfile-dev
-  restart: 'always'
-  environment:
-    NET: 'projectnamedev'
-  net: 'projectnamedev'
-  volumes:
-    - './cats/public:/app/public'
-    - './cats/src:/app/src'
+  cats:
+    build:
+      context: cats
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+        aliases:
+          - cats
+    volumes:
+      - './cats/public:/app/public'
+      - './cats/src:/app/src'
 
-dogs:
-  build: dogs
-  dockerfile: Dockerfile-dev
-  restart: 'always'
-  environment:
-    NET: 'projectnamedev'
-  net: 'projectnamedev'
-  volumes:
-    - './dogs/public:/app/public'
-    - './dogs/src:/app/src'
+  dogs:
+    build:
+      context: dogs
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+        aliases:
+          - dogs
+    volumes:
+      - './dogs/public:/app/public'
+      - './dogs/src:/app/src'
+
+networks:
+  boilerplate:

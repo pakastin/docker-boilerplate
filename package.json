@@ -13,8 +13,8 @@
   "devDependencies": {
     "chokidar": "~1.4.2",
     "nib": "~1.1.0",
-    "rollup": "~0.25.3",
-    "stylus": "~0.53.0",
+    "rollup": "~0.26.1",
+    "stylus": "~0.54.5",
     "uglify-js": "~2.6.1"
   }
 }

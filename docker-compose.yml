@@ -1,30 +1,53 @@
+version: '2'
 
-proxy:
-  build: proxy
-  restart: 'always'
-  environment:
-    NET: 'projectname'
-  net: 'projectname'
-  ports:
-    - '80:80'
+services:
+  proxy:
+    build:
+      context: proxy
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+    ports:
+      - '80:80'
 
-index:
-  build: index
-  restart: 'always'
-  environment:
-    NET: 'projectname'
-  net: 'projectname'
+  index:
+    build:
+      context: index
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+        aliases:
+          - index
 
-cats:
-  build: cats
-  restart: 'always'
-  environment:
-    NET: 'projectname'
-  net: 'projectname'
+  cats:
+    build:
+      context: cats
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+        aliases:
+          - cats
 
-dogs:
-  build: dogs
-  restart: 'always'
-  environment:
-    NET: 'projectname'
-  net: 'projectname'
+  dogs:
+    build:
+      context: dogs
+      dockerfile: Dockerfile-dev
+    restart: 'always'
+    environment:
+      NET: 'boilerplate'
+    networks:
+      boilerplate:
+        aliases:
+          - dogs
+
+networks:
+  boilerplate:
