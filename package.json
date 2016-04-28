@@ -4,12 +4,14 @@
   "description": "",
   "main": "watch.js",
   "scripts": {
-    "dev": "./build-dev && ./run-dev && node watch",
-    "dev-stop": "./stop-dev",
-    "start": "./build && ./run",
-    "stop": "./stop",
-    "scale": "./scale",
-    "scale-dev": "./scale-dev"
+    "dev": "sh sh/build-dev.sh && sh sh/run-dev.sh && node watch",
+    "dev-stop": "sh sh/stop-dev.sh",
+    "start": "sh sh/build.sh && sh sh/run.sh",
+    "stop": "sh sh/stop.sh",
+    "npminstall": "sh sh/npminstall-dev.sh",
+    "restart": "sh sh/restart-dev.sh",
+    "scale": "sh sh/scale.sh",
+    "scale-dev": "sh sh/scale-dev.sh"
   },
   "author": "",
   "license": "ISC",

@@ -16,8 +16,8 @@ watchCSS('dogs', true);
 watchJS('dogs', true);
 
 function watchNode (name) {
-  var cmd = `docker-compose -p boilerplatedev -f docker-compose-dev.yml restart ${name}`;
-  var cmd2 = `docker-compose -p boilerplatedev -f docker-compose-dev.yml exec ${name} npm install`;
+  var cmd = `npm run restart ${name}`;
+  var cmd2 = `npm run npminstall ${name}`;
 
   chokidar.watch(`${name}/src/**/*.js`)
     .on('change', exec(cmd));
